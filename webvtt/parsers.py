@@ -19,9 +19,10 @@ class TextBasedParser(object):
         self.captions = []
         self.parse_options = parse_options or {}
 
-    def read(self, file):
+    def read(self, file,content=None):
         """Reads the captions file."""
-        content = self._get_content_from_file(file_path=file)
+        if content == None:
+            content = self._get_content_from_file(file_path=file)
         self._validate(content)
         self._parse(content)
 
