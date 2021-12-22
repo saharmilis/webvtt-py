@@ -55,9 +55,9 @@ class WebVTT(object):
         return cls(file=file, captions=parser.captions)
 
     @classmethod
-    def read(cls, file):
+    def read(cls, file,content=None):
         """Reads a WebVTT captions file."""
-        parser = WebVTTParser().read(file)
+        parser = WebVTTParser().read(file,content)
         return cls(file=file, captions=parser.captions, styles=parser.styles)
 
     @classmethod
