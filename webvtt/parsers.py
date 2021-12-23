@@ -23,6 +23,8 @@ class TextBasedParser(object):
         """Reads the captions file."""
         if content == None:
             content = self._get_content_from_file(file_path=file)
+        else:
+            self._read_content_lines(content)
         self._validate(content)
         self._parse(content)
 
