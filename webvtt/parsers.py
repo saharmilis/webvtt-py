@@ -24,7 +24,7 @@ class TextBasedParser(object):
         if content == None:
             content = self._get_content_from_file(file_path=file)
         else:
-            self._read_content_lines(content)
+            content = self._read_content_lines(content)
         self._validate(content)
         self._parse(content)
 
